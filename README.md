@@ -1,1 +1,1 @@
-# js-chatgpt-dalle-movie-idea-generator
+# ChatGPT & Dall-E Movie Idea Generator
