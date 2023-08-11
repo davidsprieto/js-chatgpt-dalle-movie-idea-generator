@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     background-size: cover;
     background-repeat: repeat-y;
     background-image: url('images/moviepitchbg-dark.jpg');
@@ -78,7 +78,7 @@ section {
     background-color: var(--light);
     border-radius: var(--border-rad-lg);
     padding: .25em 1em;
-    box-shadow: 0px 1px 18px 3px var(--dark);
+    box-shadow: 0 1px 18px 3px var(--dark);
     max-width: 420px;
 }
 
@@ -148,10 +148,7 @@ textarea {
     background-color: var(--light-grey);
     padding: .8em;
     border: none;
-    border-top-right-radius: 0;
-    border-top-left-radius: var(--border-rad-lg);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: var(--border-rad-lg);
+    border-radius: var(--border-rad-lg) 0 0 var(--border-rad-lg);
     width: 100%;
     resize: none;
     min-height: 40px;
