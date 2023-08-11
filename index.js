@@ -12,18 +12,21 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 document.getElementById("send-btn").addEventListener("click", () => {
-    // if (setupTextarea.value) {
+    if (setupTextarea.value) {
+    const userInput = setupTextarea.value;
     setupInputContainer.innerHTML = `<img src="./images/loading.svg" class="loading" id="loading" alt="loading">`
     movieBossText.innerText = `Ok, just wait a second while my digital brain digests that...`
-    // }
-    fetchBotReply();
+    fetchBotReply(userInput);
+    }
 });
 
-async function fetchBotReply() {
+async function fetchBotReply(userInput) {
     const response = await openai.createCompletion({
         model: 'text-davinci-003',
-        prompt: 'Sound enthusiastic in 5 words or less.'
+        prompt: `Generate a short message to enthusiastically say "${userInput}" sounds interesting and that you need some minutes to think about it. Mention one aspect of the sentence.`,
+        max_tokens: 60
     });
     movieBossText.innerText = response.data.choices[0].text.trim();
+    console.log(response);
 }
 
