@@ -1,4 +1,4 @@
-# ChatGPT & Dall-E Movie Idea Generator Tutorial
+# ChatGPT & Dall-E Movie Idea Generator Scrimba Tutorial
 
 Quick start:
 
